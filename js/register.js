@@ -11,15 +11,15 @@ const passPattern = /[a-z0-9]{8,}/;
 const mailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 // Validation function to be called on form submit
-const isValid = (str) => {
-  if (str.id === "name") {
-    return userNamePattern.test(str.val);
-  } else if (str.id === "email") {
-    return mailPattern.test(str.val);
-  } else if (str.id === "password") {
-    return passPattern.test(str.val);
-  } else if (str.id === "confirm-pass") {
-    if (password.value === str.val) return true;
+const isValid = (input) => {
+  if (input.id === "name") {
+    return userNamePattern.test(input.value);
+  } else if (input.id === "email") {
+    return mailPattern.test(input.value);
+  } else if (input.id === "password") {
+    return passPattern.test(input.value);
+  } else if (input.id === "confirm-pass") {
+    if (password.value === input.value) return true;
   }
   return false;
 };
@@ -52,7 +52,7 @@ form.addEventListener("submit", (e) => {
   let isValidInputs = true;
 
   inputs.forEach((input) => {
-    if (!isValid({ id: input.id, val: input.value })) {
+    if (!isValid(input)) {
       document.getElementById(`${input.id}-err`).classList.remove("d-none");
       isValidInputs = false;
     } else {
