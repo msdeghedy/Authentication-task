@@ -1,0 +1,45 @@
+.form-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.form-input-wrapper:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.form-input-wrapper img {
+  border-right: 1px solid #dbe3ff;
+  margin-right: 1.2rem;
+  padding: 0 1rem;
+}
+
+.form-input-wrapper input {
+  outline: none;
+  border: none;
+  width: 80%;
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#submit-btn {
+  outline: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.error-msg {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #e03131;
+}
+
+.d-none {
+  display: none;
+}

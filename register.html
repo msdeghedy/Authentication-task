@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <script src="./js/register.js" defer></script>
+  </head>
+  <body>
+    <section class="main-content-wrapper">
+      <div class="img-wrapper">
+        <img src="./imgs/signup.png" alt="signup placeholder" />
+      </div>
+      <div class="text-wrapper">
+        <h2 class="main-header">Create Account</h2>
+        <p class="main-text">
+          Go ahead and sign up, let everyone know how awesome you are!
+        </p>
+        <form action="#" id="register-form">
+          <div class="form-input-wrapper">
+            <img src="./imgs/User.svg" alt="user icon" />
+            <input type="text" placeholder="Username" id="name" required />
+          </div>
+          <small class="d-none error-msg" id="name-err"
+            >wrong name format</small
+          >
+
+          <div class="form-input-wrapper">
+            <img src="./imgs/email.svg" alt="user icon" />
+            <input type="text" placeholder="Email" id="email" required />
+          </div>
+          <small class="d-none error-msg" id="email-err"
+            >wrong mail format</small
+          >
+          <div class="form-input-wrapper">
+            <img src="./imgs/password.svg" alt="user icon" />
+            <input type="password" placeholder="Password" id="password" />
+          </div>
+          <small class="d-none error-msg" id="password-err"
+            >Password must be at least 8 characters</small
+          >
+          <div class="form-input-wrapper">
+            <img src="./imgs/password.svg" alt="user icon" />
+            <input
+              type="password"
+              placeholder="Confirm password"
+              id="confirm-pass"
+            />
+          </div>
+          <small class="d-none error-msg" id="confirm-pass-err"
+            >Passwords don't match</small
+          >
+          <button type="submit" class="cta" id="submit-btn">
+            Create Account
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
