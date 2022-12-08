@@ -65,7 +65,7 @@ form.addEventListener("submit", (e) => {
   postData().then((res) => {
     if (res.errors) {
       for (let err in res.errors) {
-        document.getElementById(`${err}-err`).innerHTML = `${res.errors[
+        document.getElementById(`${err}-err`).innerText = `${res.errors[
           err
         ].join("")}`;
         document.getElementById(`${err}-err`).classList.remove("d-none");
